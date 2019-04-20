@@ -1,11 +1,10 @@
-package com.ach
+package com.achk
 
-import com.ach.App.CommandType.*
+import com.achk.MainApp.CommandType.*
 import java.util.*
 import java.util.stream.Collectors
 
-object App {
-
+object MainApp {
     private val installedComponents = LinkedHashMap<String, SoftwareComponent>()
     private val componentDependencies = LinkedHashMap<SoftwareComponent, Collection<SoftwareComponent>>()
 
@@ -31,7 +30,6 @@ object App {
             inputs[i] = inputItem
         }
         doIt(inputs)
-        // print(Arrays.toString(inputs))
     }
 
 
@@ -200,7 +198,6 @@ object App {
                 commands.add(command)
             }
             return commands
-
         }
     }
 
